@@ -22,4 +22,10 @@ public class SuperArray {
   public String get(int index) {
     return this.data[index];
   }
+
+  public String set(int index, String element) {
+    String temp = this.data[index];
+    this.data[index] = element;
+    return temp;
+  }
 }

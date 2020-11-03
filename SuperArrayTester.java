@@ -9,5 +9,17 @@ public class SuperArrayTester {
     for(int i = 0; i < words.size(); i++){
         System.out.println( words.get(i) );
     }
+    for(int i = 0; i < 7; ++i) {
+        words.add("Word");
+    }
+
+    for(int i = 0; i < words.size(); ++i) {
+        if(words.get(i).equals("Word")) {
+            System.out.println("Changed " + words.set(i, "NewWord") + " into NewWord");
+        }
+      }
+      for(int i = 0; i < words.size(); ++i) {
+          System.out.println(words.get(i));
+      }
   }
 }
