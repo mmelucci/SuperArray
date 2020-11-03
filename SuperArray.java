@@ -50,9 +50,10 @@ public class SuperArray {
     String newstring = "[";
     for (int i = 0; i < this.size; i ++) {
       newstring += this.data[i];
-      newstring += ", ";
-  }
-    newstring = newstring.substring(0,newstring.length()-2);
+      if (i != this.size-1) {
+        newstring += ", ";
+      }
+     }
     newstring += "]";
     return newstring;
   }
@@ -69,4 +70,8 @@ public class SuperArray {
     }
     return false;
   }
+
+  //public void add(int index, String element) {
+  //  for
+  //}
 }
