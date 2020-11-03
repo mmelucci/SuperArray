@@ -35,10 +35,38 @@ public class SuperArray {
   }
 
   private void resize() {
-    String [] resizedarray = new String[data.length + 10];
+    String [] resizedarray = new String[data.length * 2];
     for (int i = 0; i < this.size; i++) {
       resizedarray[i] = this.data[i];
     }
     this.data = resizedarray;
+  }
+
+  public boolean isEmpty() {
+    return (size == 0);
+  }
+
+  public String toString() {
+    String newstring = "[";
+    for (int i = 0; i < this.size; i ++) {
+      newstring += this.data[i];
+      newstring += ", ";
+  }
+    newstring = newstring.substring(0,newstring.length()-2);
+    newstring += "]";
+    return newstring;
+  }
+
+  public void clear() {
+    this.size = 0;
+  }
+
+  public boolean contains(String s) {
+    for (int i = 0; i < this.size; i ++) {
+      if (this.data[i] == s) {
+        return true;
+      }
+    }
+    return false;
   }
 }
