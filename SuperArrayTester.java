@@ -29,5 +29,16 @@ public class SuperArrayTester {
     }
     System.out.println(words.toString());
     System.out.println(words.contains("kani"));
+    words.add(0, "Works");
+    System.out.println(words.toString());
+    words.add(4, "Works");
+    System.out.println(words.toString());
+    System.out.println(words.size());
+    words.add(15, "Works");
+    System.out.println(words.toString());
+    System.out.println(words.size());
+    // Add REMOVE TESTS TOO, MAKE SURE TO FIX ADD AND LOOK OVER EVERYTHING
+    // System.out.println(words.indexOf("NewWord"));
+    // System.out.println(words.indexOf("NewWord"));
   }
 }

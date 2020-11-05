@@ -75,4 +75,34 @@ public class SuperArray {
     this.data = new String[InitialCapacity];
   }
 
+  public void add(int index, String element) {
+    if (index >= size) {
+      this.add(element);
+    }
+    else {
+      if (size == data.length) {
+        resize();
+      }
+      for (int i = this.size; i > index; i --) {
+        this.data[i] = this.data[i-1];
+      }
+      this.data[index] = element;
+      size ++;
+    }
+  }
+
+  // public String remove(int index) {
+  //   for (int i = index; i < this.size; i ++) {
+  //     this.data[i - 1]
+  //   }
+  // }
+
+  public int indexOf(String s) {
+    for (int i = 0; i < this.size; i ++) {
+      if (this.data[i] == s) {
+        return i;
+      }
+    }
+    return -1;
+  }
 }
