@@ -43,9 +43,9 @@ public class SuperArrayTester {
     words.remove(0);
     System.out.println(words.toString());
     System.out.println(words.size());
-
-    // Add REMOVE TESTS TOO, MAKE SURE TO FIX ADD AND LOOK OVER EVERYTHING
-    // System.out.println(words.indexOf("NewWord"));
-    // System.out.println(words.indexOf("NewWord"));
+    words.add(4, "Works");
+    System.out.println(words.toString());
+    System.out.println(words.indexOf("Works"));
+    System.out.println(words.indexOf("NewWord"));
   }
 }

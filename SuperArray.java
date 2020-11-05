@@ -102,10 +102,18 @@ public class SuperArray {
 
   public int indexOf(String s) {
     for (int i = 0; i < this.size; i ++) {
-      if (this.data[i] == s) {
+      if (this.data[i].equals(s)) {
         return i;
       }
     }
     return -1;
+  }
+
+  public String[] toArray() {
+    String [] newarray = new String[this.size];
+    for (int i = 0; i < this.size; i ++) {
+      newarray[i] = data[i];
+  }
+    return newarray;
   }
 }
