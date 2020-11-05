@@ -91,11 +91,14 @@ public class SuperArray {
     }
   }
 
-  // public String remove(int index) {
-  //   for (int i = index; i < this.size; i ++) {
-  //     this.data[i - 1]
-  //   }
-  // }
+  public String remove(int index) {
+    String temporary = data[index];
+    for (int i = index; i < this.size; i ++) {
+      this.data[i] = this.data[i + 1];
+    }
+    size --;
+    return temporary;
+  }
 
   public int indexOf(String s) {
     for (int i = 0; i < this.size; i ++) {

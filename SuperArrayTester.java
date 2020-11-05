@@ -37,6 +37,13 @@ public class SuperArrayTester {
     words.add(15, "Works");
     System.out.println(words.toString());
     System.out.println(words.size());
+    words.remove(4);
+    System.out.println(words.toString());
+    System.out.println(words.size());
+    words.remove(0);
+    System.out.println(words.toString());
+    System.out.println(words.size());
+
     // Add REMOVE TESTS TOO, MAKE SURE TO FIX ADD AND LOOK OVER EVERYTHING
     // System.out.println(words.indexOf("NewWord"));
     // System.out.println(words.indexOf("NewWord"));
