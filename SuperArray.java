@@ -64,14 +64,15 @@ public class SuperArray {
 
   public boolean contains(String s) {
     for (int i = 0; i < this.size; i ++) {
-      if (this.data[i] == s) {
+      if (this.data[i].equals(s)) {
         return true;
       }
     }
     return false;
   }
 
-  //public void add(int index, String element) {
-  //  for
-  //}
+  public SuperArray(int InitialCapacity) {
+    this.data = new String[InitialCapacity];
+  }
+
 }

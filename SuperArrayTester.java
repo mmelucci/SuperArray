@@ -22,8 +22,11 @@ public class SuperArrayTester {
           System.out.println(words.get(i));
       }
     System.out.println(words.isEmpty());
-    SuperArray other = new SuperArray();
-    System.out.println(other.isEmpty());
+    words.clear();
+    System.out.println(words.isEmpty());
+    for(int i = 0; i < 10; ++i) {
+        words.add("Word");
+    }
     System.out.println(words.toString());
     System.out.println(words.contains("kani"));
   }
