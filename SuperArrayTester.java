@@ -40,7 +40,7 @@ public class SuperArrayTester {
     words.remove(4);
     System.out.println(words.toString());
     System.out.println(words.size());
-    words.remove(15);
+    words.remove(16);
     System.out.println(words.toString());
     System.out.println(words.size());
     words.add(4, "Works");
