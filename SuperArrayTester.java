@@ -47,5 +47,14 @@ public class SuperArrayTester {
     System.out.println(words.toString());
     System.out.println(words.indexOf("Works"));
     System.out.println(words.indexOf("NewWord"));
+
+    SuperArray testarray = new SuperArray();
+    testarray.add("kani");   testarray.add("uni");     testarray.add("ebi");     testarray.add("una");
+    testarray.add("una");    testarray.add("ebi");     testarray.add("kani");    testarray.add("una");
+    testarray.add("una");    testarray.add("ebi");     testarray.add("toro");
+
+    System.out.println(testarray);
+    System.out.println(testarray.lastIndexOf("toro"));
+    System.out.println(testarray.lastIndexOf("una"));
   }
 }
