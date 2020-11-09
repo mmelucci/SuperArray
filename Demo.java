@@ -8,15 +8,37 @@ public class Demo {
   }
 
   public static SuperArray findOverlap(SuperArray a, SuperArray b) {
-    SuperArray temp = new SuperArray ();
+    SuperArray newarray = new SuperArray ();
     for (int i = 0; i < a.size(); i ++) {
       if (b.contains(a.get(i))) {
-        temp.add(a.get(i));
+        newarray.add(a.get(i));
       }
     }
-    removeDuplicates(temp);
-    return temp;
+    removeDuplicates(newarray);
+    return newarray;
   }
+
+  public static SuperArray zip(SuperArray a, SuperArray b){
+    SuperArray newarray = new SuperArray ();
+    int maxsize;
+    if (a.size() > b.size()){
+      maxsize = a.size();
+    }
+    else{
+      maxsize = b.size();
+    }
+    for (int i = 0; i < maxsize; i++) {
+      if (i < a.size()){
+        newarray.add(a.get(i));
+      }
+      if (i < b.size()){
+        newarray.add(b.get(i));
+      }
+    }
+    return newarray;
+  }
+
+
 
   public static void main(String[]args){
     SuperArray words = new SuperArray();
