@@ -52,9 +52,15 @@ public class SuperArrayTester {
     testarray.add("kani");   testarray.add("uni");     testarray.add("ebi");     testarray.add("una");
     testarray.add("una");    testarray.add("ebi");     testarray.add("kani");    testarray.add("una");
     testarray.add("una");    testarray.add("ebi");     testarray.add("toro");
+    SuperArray testarray1 = new SuperArray();
+    testarray1.add("kani");   testarray1.add("uni");     testarray1.add("ebi");     testarray1.add("una");
+    testarray1.add("una");    testarray1.add("ebi");     testarray1.add("kani");    testarray1.add("una");
+    testarray1.add("una");    testarray1.add("ebi");     testarray1.add("toro");
 
     System.out.println(testarray);
     System.out.println(testarray.lastIndexOf("toro"));
     System.out.println(testarray.lastIndexOf("una"));
+    System.out.println(testarray.equals(testarray1));
+    System.out.println(testarray.equals(words));
   }
 }
