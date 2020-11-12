@@ -40,7 +40,7 @@ public class SuperArrayTester {
     words.remove(4);
     System.out.println(words.toString());
     System.out.println(words.size());
-    words.remove(16);
+    words.remove(11);
     System.out.println(words.toString());
     System.out.println(words.size());
     words.add(4, "Works");
@@ -90,6 +90,13 @@ public class SuperArrayTester {
  }
  catch (IndexOutOfBoundsException e) {
   System.out.println("add index out of bounds");
+  System.out.println(e);
+ }
+ try {
+   testarray.remove(14);
+ }
+ catch (IndexOutOfBoundsException e) {
+  System.out.println("remove index out of bounds");
   System.out.println(e);
 }
   }

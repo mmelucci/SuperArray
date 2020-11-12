@@ -105,6 +105,9 @@ public class SuperArray {
   }
 
   public String remove(int index) {
+    if  (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("The index " + index + " is out of bounds");
+    }
     String temporary = data[index];
     for (int i = index; i < this.size-1; i ++) {
       this.data[i] = this.data[i + 1];
