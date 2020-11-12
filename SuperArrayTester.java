@@ -75,8 +75,15 @@ public class SuperArrayTester {
     testarray.get(11);
    }
    catch (IndexOutOfBoundsException e) {
-    System.out.println("Index out of bounds");
+    System.out.println("get index out of bounds");
     System.out.println(e);
   }
+  try {
+   testarray.set(11, "hello");
+  }
+  catch (IndexOutOfBoundsException e) {
+   System.out.println("set index out of bounds");
+   System.out.println(e);
+ }
   }
 }

@@ -32,6 +32,9 @@ public class SuperArray {
   }
 
   public String set(int index, String element) {
+    if  (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("The index " + index + " is out of range");
+    }
     String temp = this.data[index];
     this.data[index] = element;
     return temp;
