@@ -63,6 +63,7 @@ public class SuperArrayTester {
     System.out.println(testarray.equals(testarray1));
     System.out.println(testarray.equals(words));
 
+
     try {
       SuperArray testarray2 = new SuperArray(-1);
     }
@@ -70,5 +71,12 @@ public class SuperArrayTester {
      System.out.println("InitialCapacity cannot be negative");
      System.out.println(e);
    }
+   try {
+    testarray.get(11);
+   }
+   catch (IndexOutOfBoundsException e) {
+    System.out.println("Index out of bounds");
+    System.out.println(e);
+  }
   }
 }
