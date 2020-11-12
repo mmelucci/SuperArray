@@ -34,7 +34,7 @@ public class SuperArrayTester {
     words.add(4, "Works");
     System.out.println(words.toString());
     System.out.println(words.size());
-    words.add(15, "Works");
+    words.add(10, "Works");
     System.out.println(words.toString());
     System.out.println(words.size());
     words.remove(4);
@@ -85,5 +85,12 @@ public class SuperArrayTester {
    System.out.println("set index out of bounds");
    System.out.println(e);
  }
+ try {
+   testarray.add(12, "hi");
+ }
+ catch (IndexOutOfBoundsException e) {
+  System.out.println("add index out of bounds");
+  System.out.println(e);
+}
   }
 }

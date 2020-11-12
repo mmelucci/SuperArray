@@ -26,14 +26,14 @@ public class SuperArray {
 
   public String get(int index) {
     if  (index < 0 || index >= size()) {
-      throw new IndexOutOfBoundsException("The index " + index + " is out of range");
+      throw new IndexOutOfBoundsException("The index " + index + " is out of bounds");
     }
     return this.data[index];
   }
 
   public String set(int index, String element) {
     if  (index < 0 || index >= size()) {
-      throw new IndexOutOfBoundsException("The index " + index + " is out of range");
+      throw new IndexOutOfBoundsException("The index " + index + " is out of bounds");
     }
     String temp = this.data[index];
     this.data[index] = element;
@@ -86,7 +86,10 @@ public class SuperArray {
   }
 
   public void add(int index, String element) {
-    if (index >= size) {
+    if  (index < 0 || index > size()) {
+      throw new IndexOutOfBoundsException("The index " + index + " is out of bounds");
+    }
+    if (index == size) {
       this.add(element);
     }
     else {
