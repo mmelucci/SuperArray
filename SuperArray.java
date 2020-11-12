@@ -72,6 +72,10 @@ public class SuperArray {
   }
 
   public SuperArray(int InitialCapacity) {
+    if (InitialCapacity < 0){
+     throw new IllegalArgumentException("InitialCapacity " + InitialCapacity
+               + " cannot be negative");
+   }
     this.data = new String[InitialCapacity];
   }
 

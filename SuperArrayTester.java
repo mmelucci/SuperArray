@@ -62,5 +62,13 @@ public class SuperArrayTester {
     System.out.println(testarray.lastIndexOf("una"));
     System.out.println(testarray.equals(testarray1));
     System.out.println(testarray.equals(words));
+
+    try {
+      SuperArray testarray2 = new SuperArray(-1);
+    }
+    catch (IllegalArgumentException e) {
+     System.out.println("InitialCapacity cannot be negative");
+     System.out.println(e);
+   }
   }
 }
